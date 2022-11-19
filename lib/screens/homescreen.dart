@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
               // physics: NeverScrollableScrollPhysics(),
               itemCount: Resturant.resturant.length,
               itemBuilder: (context, index) {
-                return List_view_Resturant(Resturant.resturant[index]);
+                return List_View_Resturant(Resturant.resturant[index]);
               }),
         )
       ],

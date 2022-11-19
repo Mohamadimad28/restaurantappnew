@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:restaurantappnew/model/bn_item.dart';
-import 'package:restaurantappnew/model/fastest_delivery.dart';
 import 'package:restaurantappnew/model/foodmodle.dart';
 import 'package:restaurantappnew/screens/favorite_screen.dart';
 import 'package:restaurantappnew/screens/food_screen.dart';
@@ -21,16 +20,17 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
-  // likePost(Food food) {
-  //   food.isLike = !food.isLike;
-  //   setState((){});
-  // }
+  likePost(Food food) {
+    int index = Food.DataFood.indexOf(food);
+    Food.DataFood[index].isLike = !Food.DataFood[index].isLike;
+    setState(() {});
+  }
 
   final List<BnItem> _bnItem = [
     BnItem(title: 'Home', widget: HomeScreen()),
-    BnItem(title: 'Categories', widget: FoodScreen(Food('', '', ''))),
+    BnItem(title: 'Categories', widget: FoodScreen()),
     BnItem(title: 'Favorite', widget: FavoriteScreen()),
-    BnItem(title: 'Setting', widget: SettingScreen()),
+    const BnItem(title: 'Setting', widget: SettingScreen()),
   ];
 
   @override
@@ -50,21 +50,21 @@ class _MainScreenState extends State<MainScreen> {
         ),
         title: Text(
           _bnItem[_currentIndex].title,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
         centerTitle: true,
         actions: [
           (_currentIndex == 3)
               ? IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.logout),
+                  icon: const Icon(Icons.logout),
                   color: Colors.black,
                 )
               : IconButton(
                   onPressed: () {
                     widget.myFun();
                   },
-                  icon: Icon(Icons.dark_mode),
+                  icon: const Icon(Icons.dark_mode),
                   color: Colors.black,
                 ),
         ],

@@ -9,6 +9,14 @@ class Food {
   static List<Food> DataFood = [
     Food('assest/images/Resturant3.jpg', 'Fino bread', '\$55.5'),
     Food('assest/images/Resturant4.jpg', 'Pizza', '\$45'),
-    Food('assest/images/Resturant5.jpg', 'Shawarma', '\$5'),
+    Food('assest/images/Resturant3.jpg', 'Shawarma', '\$5'),
+    Food('assest/images/Resturant5.jpg', 'Pizza', '\$45'),
+    Food('assest/images/Resturant3.jpg', 'Fino bread', '\$5'),
+    Food('assest/images/Resturant4.jpg', 'Shawarma', '\$45'),
+    Food('assest/images/Resturant5.jpg', 'Fino bread', '\$5'),
+    Food('assest/images/Resturant3.jpg', 'Fino bread', '\$5'),
+    Food('assest/images/Resturant4.jpg', 'Shawarma', '\$45'),
+    Food('assest/images/Resturant5.jpg', 'Fino bread', '\$5'),
+
   ];
 }
